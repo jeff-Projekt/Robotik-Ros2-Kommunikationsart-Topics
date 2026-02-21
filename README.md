@@ -1,5 +1,8 @@
-# Praktikum-Hochschule-Robotik-Topic-2025
-akademisches Praktikum-ROS2-Topics / Ingenieur / Labor
+# Praktikum-Hochschule-Robotik-Topics
+akademisches Praktikum-ROS2-Topics / Elektrotechnik / Labor
+Hochschule : Technische Hochschule Georg Agricola
+Wissenschaftsbereich : Elektrotechnik (BET-Energietechnik)
+Team : 2 Studenten
 
     Praktikumsbeschreibung
 
