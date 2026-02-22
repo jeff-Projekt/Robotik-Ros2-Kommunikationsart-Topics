@@ -14,8 +14,8 @@ Die Funktionalität in der Simulationsumgebung Gazebo mit dem TurtleBot 4 getest
 Ziel ist es, die grundlegende Kommunikationsstruktur von ROS2 über Topics zu verstehen und praktisch umzusetzen.
 
     Systemarchitektur
-https://docs.ros.org/en/foxy/_images/Topic-SinglePublisherandSingleSubscriber.gif
-https://docs.ros.org/en/foxy/_images/Topic-MultiplePublisherandMultipleSubscriber.gif
+![Topic-SinglePublisherandSingleSubscriber.gif](Systemarchitektur/Topic-SinglePublisherandSingleSubscriber.gif)
+![Topic-MultiplePublisherandMultipleSubscriber.gif](Systemarchitektur/Topic-MultiplePublisherandMultipleSubscriber.gif)
 
     Architekturüberblick
 Das System basiert auf dem Publish-Subscribe-Modell:
@@ -47,8 +47,6 @@ Node: laser_data_publisher
 
 Der Publisher simuliert die Abstandswerte eines 2D-Laserscanners und veröffentlicht sie mit einer Frequenz von 10 Hz auf dem Topic:
 
-/scan
-
         Eigenschaften des simulierten Laserscanners
 Parameter	Wert
 Startwinkel	-90°
@@ -64,11 +62,11 @@ Verwendung des Nachrichtentyps LaserScan
 Erzeugung zufälliger Abstandswerte mittels Normalverteilung
 Begrenzung der Werte auf den gültigen Messbereich
 Periodisches Publishen über einen ROS2-Timer
-
+![code1-Publisher.png](Screenshots/code1-Publisher.png)
     Teil 2 – Subscriber
 Node: laser_data_subscriber
 Der Subscriber empfängt die Laserscandaten vom Topic scan und analysiert die Abstandswerte.
-
+![code-Subscriber.png](Screenshots/code-Subscriber.png)
         Funktion
 Speicherung der empfangenen Messwerte
 Ermittlung des Minimalwerts
@@ -100,10 +98,12 @@ source install/setup.bash
 
         Publisher starten
 ros2 run v1_topic_pkg laser_data_publisher
-
+![Publisher starten.png](Screenshots/Publisher%20starten.png)
         Subscriber starten
 ros2 run v1_topic_pkg laser_data_subscriber
-
+![Subscriber Starten.png](Screenshots/Subscriber%20Starten.png)
+        simulation im Terminal
+![Simulation-Fehlerausgabe.png](Screenshots/Simulation-Fehlerausgabe.png)
         Simulation starten (Gazebo)
 ros2 launch turtlebot4_gz_bringup turtlebot4_gz.launch.py
 
